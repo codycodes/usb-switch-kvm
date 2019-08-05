@@ -3,6 +3,9 @@ import os
 from pynput import keyboard
 from time import sleep
 
+# TODO: better key combos
+# TODO: potentially more functions in a different branch
+
 COMBINATIONS = [
     {keyboard.Key.shift, keyboard.KeyCode(char='b')},
     {keyboard.Key.shift, keyboard.KeyCode(char='B')},
