@@ -11,8 +11,14 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  Serial.println("blinking... now!");
-  blink();
+  if(Serial.available()) {
+    // get incoming byte:
+    int inByte = Serial.read();
+    Serial.println(inByte);
+    if (inByte == 'b'){
+      blink();
+    }
+  }
 }
 
 void blink() {
